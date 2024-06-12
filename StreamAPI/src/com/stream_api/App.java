@@ -39,8 +39,8 @@ public class App {
 		.forEach(rollNo -> System.out.println(rollNo));
 		
 		Stream<Student> studentStream3 = Arrays.stream(studentArray); // for third operation of odd Roll number.
-		studentStream3
-		.filter(rollNo -> rollNo.getRollNo() % 2 == 1)
+		studentStream3 //We are NOT using 'Map'
+		.filter(rollNo -> rollNo.getRollNo() % 2 == 1) //Here we are ussing 'Getter' (.get) because we didnt used Map.
 		.forEach(rollNo -> System.out.println(rollNo));
 	}
 }
